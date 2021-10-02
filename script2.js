@@ -6,7 +6,7 @@ function escapeHTML(string){
     .replace(/'/g, "&#x27;");
 }
 function isSm() {
-    return navigator.userAgent.match(/iPhone|Android.+Mobile/)
+    return window.innerWidth >= 1024
 };
 window.onload = function(){
     submit = document.getElementById("urlsend");
@@ -16,8 +16,8 @@ window.onload = function(){
             url_embed = url.replace("https://www.youtube.com/watch?v=","https://www.youtube.com/embed/").replace("https://youtu.be/","https://www.youtube.com/embed/")
             iframe = document.getElementById(`iframe${i}`);
 
-            if((url != "") && (url != " ")){
-                if (isSm){
+            if((url != "") & (url != " ")){
+                if (isSm()){
                     iframe.setAttribute("src", url_embed + "?autoplay=1&mute=1");
                 }
                 else{

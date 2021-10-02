@@ -11,13 +11,13 @@ function isSm() {
 window.onload = function(){
     submit = document.getElementById("urlsend");
     submit.addEventListener("click", () => {
-        for(let i=1;i<=4;i++){
+        for(let i=1;i<=num;i++){
             url = escapeHTML(document.getElementById(`url${i}`).value);
             url_embed = url.replace("https://www.youtube.com/watch?v=","https://www.youtube.com/embed/").replace("https://youtu.be/","https://www.youtube.com/embed/")
             iframe = document.getElementById(`iframe${i}`);
 
             if((url != "") & (url != " ")){
-                if (isSm){
+                if (isSm()){
                     iframe.setAttribute("src", url_embed + "?autoplay=1&mute=1");
                 }
                 else{
@@ -30,7 +30,7 @@ window.onload = function(){
     });
     storageAccess = document.getElementById("storageAccess")
     storageAccess.addEventListener("click", () => {
-    for(let i=1;i<=4;i++){
+    for(let i=1;i<=num;i++){
         document.getElementById(`url${i}`).value = sessionStorage.getItem(`iframe${i}`)
     }
     

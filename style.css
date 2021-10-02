@@ -1,0 +1,29 @@
+body{
+    background: linear-gradient(rgba(30, 0, 255, 0.7),#05FBFF);
+    overflow-y: scroll;
+    
+    /*firefox*/
+    scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+    display:none;
+}
+
+hr{
+    color: white;
+}
+.form{
+    background: white;
+    padding: 1rem;
+    margin: 1rem;
+}
+.sample{
+    box-sizing: border-box;
+    border: 2px solid white;
+    text-align: center;
+    padding: 1rem;
+
+    background: linear-gradient(rgba(30, 0, 255, 0.7),#05FBFF);
+    color: white;
+    
+}

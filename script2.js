@@ -12,8 +12,8 @@ window.onload = function(){
             url = escapeHTML(document.getElementById(`url${i}`).value);
             url_embed = url.replace("https://www.youtube.com/watch?v=","https://www.youtube.com/embed/").replace("https://youtu.be/","https://www.youtube.com/embed/")
             iframe = document.getElementById(`iframe${i}`);
-            iframe.setAttribute("src", url_embed + "?autoplay=1&mute=1");
             if(url != ""){
+                iframe.setAttribute("src", url_embed + "?autoplay=1&mute=1");
                 sessionStorage.setItem(`iframe${i}`, url)
             }
         }
